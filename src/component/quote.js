@@ -7,7 +7,9 @@ export default function Quote() {
     let author;
     let fetchedQuote;
     const [initialQuote, setQuote] = useState({
-       
+        newquote:"This is a quote",
+        newAuthor:"new author", 
+        btntext:"get Quote"  
     });
     const getQuote=()=>{
         
@@ -19,6 +21,11 @@ export default function Quote() {
           author=response.data.author;
           console.log(content);
           console.log(author);
+          setQuote({
+            newquote:content,
+            newAuthor:author,   
+            btntext:"New Quote"  
+          })
           
         })
         .catch(function (error) {
@@ -27,17 +34,17 @@ export default function Quote() {
         })
         .then(function () {
           console.log("done");
-          
+
         });
       
     }
     
     return (
         <div>
-            <QuoteContent content="content" author="author"></QuoteContent>
+            <QuoteContent content={initialQuote.newquote} author={initialQuote.newAuthor}></QuoteContent>
             <a className="btn btn-success" onClick={()=>{
                 getQuote();
-            }}>ok</a>
+            }}>{initialQuote.btntext}</a>
         </div>
     )
 }
