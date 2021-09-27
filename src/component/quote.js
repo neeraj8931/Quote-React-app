@@ -6,10 +6,8 @@ export default function Quote() {
     let content;
     let author;
     let fetchedQuote;
-    const [initialQuote, setQuote] = useState(fetchedQuote={
-        quoteContent:"Click on the button to get Quote.",
-        quoteBtn:"Get Quote",
-        quoteAuthor:""
+    const [initialQuote, setQuote] = useState({
+       
     });
     const getQuote=()=>{
         
@@ -29,22 +27,17 @@ export default function Quote() {
         })
         .then(function () {
           console.log("done");
-          setQuote(
-            fetchedQuote.quoteContent=content,
-            fetchedQuote.quoteAuthor=author,
-            fetchedQuote.quoteBtn="Get Next Quote"
-
-        );
+          
         });
       
     }
     
     return (
         <div>
-            <QuoteContent content={ fetchedQuote.quoteContent} author={fetchedQuote.quoteAuthor}></QuoteContent>
+            <QuoteContent content="content" author="author"></QuoteContent>
             <a className="btn btn-success" onClick={()=>{
                 getQuote();
-            }}>{fetchedQuote.quoteBtn}</a>
+            }}>ok</a>
         </div>
     )
 }
