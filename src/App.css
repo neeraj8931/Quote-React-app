@@ -11,5 +11,15 @@
 .quote-box{
   width:50%;
   margin:0 auto;
-  border: 1px solid blanchedalmond;
+  border: 1px solid;
+  height:500px;
+}
+.quote-content{
+  padding:7rem 2rem;
+}
+a{
+  margin-left:5px;
+}
+.content-box{
+  height:150px;
 }
