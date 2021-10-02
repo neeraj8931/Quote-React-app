@@ -16,15 +16,8 @@ function App() {
     canvasColor:backcolorArray[Math.floor(1 + Math.random() * 9)],
     fontAndBorderColor:fontcolorArray[Math.floor(1 + Math.random() * 9)]+"!important"
 });
-   let getColors=()=>{
-    
-       colorSchemas={
-          backgroundColor:backcolorArray[Math.floor(1 + Math.random() * 9)],
-          color:fontcolorArray[Math.floor(1 + Math.random() * 9)]+"!important",
-          borderr: fontcolorArray[Math.floor(1 + Math.random() * 9)]+"!important"
-      }
-   }
-   getColors();
+ 
+  
   return (
     <>
     <div className="full-page" style={{backgroundColor:initialColors.canvasColor, color:initialColors.fontAndBorderColor,border:"2px solid"+ initialColors.fontAndBorderColor}} >
